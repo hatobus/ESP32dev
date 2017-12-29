@@ -21,18 +21,31 @@ void loop() {
       pixels.show();
       delay(10);
   }
-  delay(500);
+  delay(300);
 
 
   for(; j > 0; j--){
       
       for(i=0; i<pixels.numPixels(); i++) {
-          pixels.setPixelColor(i, pixels.Color(255-j, j, 0));
+          pixels.setPixelColor(i, pixels.Color(0, j, 255-j));
           }
       
       //j--;
       pixels.show();
       delay(10);
   }
-  delay(500);
+  delay(300);
+
+
+  for(j=0; j < 255; j++){
+      
+      for(i=0; i<pixels.numPixels(); i++) {
+          pixels.setPixelColor(i, pixels.Color(j, 0, 255-j));
+          }
+      
+      //j++;
+      pixels.show();
+      delay(10);
+  }
+  delay(300);
 }
