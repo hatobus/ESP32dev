@@ -17,6 +17,7 @@ void loop() {
           pixels.setPixelColor(i, pixels.Color(255-j, j, 0));
           }
       
+      //j++;
       pixels.show();
       delay(10);
   }
